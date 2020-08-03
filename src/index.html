@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Mapping</title>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">
+            <h2 id="location"><span id="location1">City, Region, Country</span><span id="location2"></span>
+                <div id="cityList"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                    <ul id="list">
+                        <li class="listItem">City, Region, Country<span id="hide"></span></li>
+                    </ul>
+                </div>
+            </h2>
+            <h3 id="forcast">Current Weather</h3>
+            <h4 id="temp">0 &#8451 / 0 &#8457</h4>
+            <img src="./Images/1.png" id="img">
+        </div>
+        <div id="forecast">
+            <div id="hourly" class="daily">Next 12Hour</div>
+            <div id="today" class="daily">Summary</div>
+            <div id="day1" class="daily">Today</div>
+            <div id="day2" class="daily">Tomorrow</div>
+            <div id="day3" class="daily">3rd Day</div>
+            <div id="day4" class="daily">4th Day</div>
+            <div id="day5" class="daily">5th Day</div>
+        </div>
+        <div id="box2">
+            <div id="box2_1">
+                <p id="humidity" class="prime">
+                    <span id="_currentTime">00:00 AM</span>
+                    <span id="_currentWeather">Current Weather</span>
+                    <span id="_details"><a href="#" target="_blank">Details</a></span>
+                </p>
+                <p id="points" class="prime">
+                    <span id="_feelsLike" class="_equal">Feels Like</span>
+                    <span id="_temperature" class="_equal">Temperature</span>
+                    <span id="_windSpeed" class="_equal">Wind Speed</span>
+                    <span id="_humidity" class="_equal">Humidity</span>
+                    <span id="_visibility" class="_equal">Visibility</span>
+                    <span id="_dewPoint" class="_equal">Dew Point</span>
+                </p>
+                <p id="values" class="prime">
+                    <span id="_fl_val" class="_equal">0</span>
+                    <span id="_tmp_val" class="_equal">0</span>
+                    <span id="_ws_val" class="_equal">0</span>
+                    <span id="_rh_val" class="_equal">0</span>
+                    <span id="_v_val" class="_equal">0</span>
+                    <span id="_dp_val" class="_equal">0</span>
+                </p>
+            </div>
+            <div id="box2_2">
+                <p id="time" class="fullForecast">Time:</p>
+                <p id="weatherIcon" class="fullForecast">Weather Icons:</p>
+                <p id="temprature" class="fullForecast">Temprature:</p>
+                <p id="details" class="fullForecast">Details:</p>
+            </div>
+            <div id="box2_3">
+                <p id="topic" class="fullForecast">
+                    <div id="top1">
+                        <p id="Day" class="fullForecast">Day</p>
+                        <p id="Night" class="fullForecast">Night</p>
+                        <p id="Temprature" class="fullForecast">Temperature</p>
+                    </div>
+                </p>
+                <p id="day_nightIcons" class="fullForecast">
+                    <div id="top2">
+                        <p id="Day_icon" class="fullForecast">Day Icon</p>
+                        <p id="Night_icon" class="fullForecast">Night Icon</p>
+                        <p id="Temp_min" class="fullForecast">Temperature Min</p>
+                        <p id="Temp_max" class="fullForecast">Temperature Max</p>
+                    </div>
+                </p>
+                <p id="t_icons" class="fullForecast">
+                    <div id="top3">
+                        <p id="Day_cap" class="fullForecast">Day Forecast</p>
+                        <p id="Night_cap" class="fullForecast">Night Forecast</p>
+                        <p id="Temp1_val" class="fullForecast">Temperature Value</p>
+                        <p id="Temp2_val" class="fullForecast">Temperature Value</p>
+                    </div>
+                </p>
+                <p id="t_details" class="fullForecast">
+                    <div id="top4">
+                        <p id="complete_forecast" class="fullForecast">Complete Forecast</p>
+                        <p id="complete_data" class="fullForecast">Complete Details</p>
+                    </div>
+                </p>
+            </div>
+            
+        </div>
+        <div id="box3">
+            <button id="changeLocation" type="button">Change Location</button>
+            <div id="modalBackground">
+                <div id="modal">
+                    <div id="modalHead">
+                        <h5 id="head">Location</h5>
+                        <span id="close">&times;</span>
+                    </div>
+                    <div id="modalBody">
+                        <label for="city">City</label>
+                        <input type="text" id="city">
+                    </div>
+                    <div id="modalfooter">
+                        <button id="saveChanges" type="button">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./weather.js"></script>
+    <script src="./interface.js"></script>
+    <script src="./storage.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
